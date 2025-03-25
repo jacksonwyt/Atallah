@@ -1,0 +1,822 @@
+/* Dealer Profile Page Styles */
+
+/* Profile Header */
+.dealer-profile-header {
+    margin-bottom: var(--spacing-lg);
+}
+
+.dealer-cover {
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.dealer-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dealer-profile-info {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: var(--spacing-lg);
+    margin-top: -60px;
+    position: relative;
+}
+
+.dealer-profile-logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid var(--dark-grey);
+    background-color: var(--dark-grey);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.dealer-profile-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dealer-profile-name {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+    margin-top: var(--spacing-lg);
+}
+
+.dealer-profile-name h1 {
+    margin-bottom: 0;
+    font-size: 2rem;
+}
+
+.dealer-verification {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9rem;
+    color: var(--pastel-orange);
+}
+
+.dealer-profile-stats {
+    display: flex;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-value {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--light-grey);
+}
+
+.dealer-bio {
+    margin-bottom: var(--spacing-md);
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+.dealer-contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-size: 0.9rem;
+    color: var(--light-grey);
+}
+
+.dealer-actions {
+    display: flex;
+    gap: var(--spacing-sm);
+    align-items: flex-start;
+    margin-top: var(--spacing-lg);
+}
+
+.follow-btn, .message-btn {
+    padding: 0.6rem 1.5rem;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.follow-btn {
+    background-color: var(--pastel-orange);
+    color: var(--dark-blue);
+}
+
+.follow-btn:hover {
+    background-color: #ff8c5a;
+}
+
+.message-btn {
+    background-color: transparent;
+    color: var(--white);
+    border: 1px solid var(--light-grey);
+}
+
+.message-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.share-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: var(--white);
+    border: 1px solid var(--light-grey);
+}
+
+.share-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Dealer Navigation */
+.dealer-nav {
+    background-color: var(--dark-grey);
+    margin-bottom: var(--spacing-lg);
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+}
+
+.dealer-nav ul {
+    display: flex;
+    padding: 0;
+}
+
+.dealer-nav li {
+    flex: 1;
+    text-align: center;
+}
+
+.dealer-nav a {
+    display: block;
+    padding: var(--spacing-md);
+    font-weight: 500;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.dealer-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dealer-nav a.active {
+    color: var(--pastel-orange);
+}
+
+.dealer-nav a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--pastel-orange);
+}
+
+/* Featured Inventory */
+.dealer-featured {
+    margin-bottom: var(--spacing-xl);
+}
+
+.dealer-featured .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.controls {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.prev-btn, .next-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark-grey);
+    color: var(--white);
+    border: none;
+    font-size: 1rem;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: var(--medium-grey);
+}
+
+.featured-carousel {
+    overflow: hidden;
+    border-radius: var(--border-radius-md);
+}
+
+.featured-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-md);
+    background-color: var(--dark-grey);
+    overflow: hidden;
+}
+
+.featured-image {
+    position: relative;
+    height: 400px;
+}
+
+.featured-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.featured-tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: var(--pastel-orange);
+    color: var(--dark-blue);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.featured-details {
+    padding: var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+}
+
+.featured-details h3 {
+    font-size: 1.8rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.featured-details .price {
+    font-size: 1.5rem;
+    color: var(--pastel-orange);
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+}
+
+.featured-details .description {
+    line-height: 1.6;
+    margin-bottom: var(--spacing-lg);
+    color: var(--light-grey);
+}
+
+.featured-specs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.spec {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    color: var(--lighter-grey);
+}
+
+.view-details {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    padding: 0.8rem 1.5rem;
+    border-radius: var(--border-radius-md);
+    text-align: center;
+    font-weight: 500;
+    margin-top: auto;
+    transition: all 0.3s ease;
+}
+
+.view-details:hover {
+    background-color: var(--medium-blue);
+}
+
+/* Inventory Filter */
+.inventory-filter {
+    margin-bottom: var(--spacing-lg);
+    background-color: var(--dark-grey);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-md);
+}
+
+.filter-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    align-items: flex-end;
+}
+
+.filter-group {
+    flex: 1;
+    min-width: 180px;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+    color: var(--light-grey);
+}
+
+.filter-group select {
+    width: 100%;
+    padding: 0.7rem;
+    background-color: var(--black);
+    color: var(--white);
+    border: 1px solid var(--medium-grey);
+    border-radius: var(--border-radius-sm);
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="6"><path d="M0 0l6 6 6-6z" fill="%23ffffff"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px;
+}
+
+.filter-group select:focus {
+    outline: none;
+    border-color: var(--pastel-orange);
+}
+
+.filter-btn {
+    background-color: var(--pastel-orange);
+    color: var(--dark-blue);
+    padding: 0.7rem 1.5rem;
+    border-radius: var(--border-radius-sm);
+    font-weight: 500;
+    margin-left: auto;
+}
+
+.filter-btn:hover {
+    background-color: #ff8c5a;
+}
+
+/* Inventory Grid */
+.inventory-grid {
+    margin-bottom: var(--spacing-xl);
+}
+
+.inventory-grid .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.sort-options {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.sort-options label {
+    font-size: 0.9rem;
+    color: var(--light-grey);
+}
+
+.sort-options select {
+    padding: 0.5rem 2rem 0.5rem 0.7rem;
+    background-color: var(--dark-grey);
+    color: var(--white);
+    border: 1px solid var(--medium-grey);
+    border-radius: var(--border-radius-sm);
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="6"><path d="M0 0l6 6 6-6z" fill="%23ffffff"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px;
+}
+
+.rv-condition {
+    margin-top: var(--spacing-sm);
+}
+
+.condition-tag {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.condition-tag.new {
+    background-color: #4caf50;
+    color: white;
+}
+
+.condition-tag.used {
+    background-color: #2196f3;
+    color: white;
+}
+
+/* Reviews Section */
+.dealer-reviews {
+    margin-bottom: var(--spacing-xl);
+    padding: var(--spacing-lg);
+    background-color: var(--dark-grey);
+    border-radius: var(--border-radius-md);
+}
+
+.write-review-btn {
+    padding: 0.5rem 1rem;
+    background-color: var(--pastel-orange);
+    color: var(--dark-blue);
+    border-radius: var(--border-radius-sm);
+    font-weight: 500;
+}
+
+.write-review-btn:hover {
+    background-color: #ff8c5a;
+}
+
+.review-stats {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-lg);
+    border-bottom: 1px solid var(--medium-grey);
+}
+
+.overall-rating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-right: var(--spacing-lg);
+    border-right: 1px solid var(--medium-grey);
+}
+
+.rating-number {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: var(--spacing-sm);
+}
+
+.rating-stars {
+    color: var(--pastel-orange);
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.total-reviews {
+    font-size: 0.9rem;
+    color: var(--light-grey);
+}
+
+.rating-breakdown {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.rating-bar {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.rating-label {
+    width: 60px;
+    text-align: right;
+    font-size: 0.9rem;
+}
+
+.bar-container {
+    flex: 1;
+    height: 8px;
+    background-color: var(--medium-grey);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.bar {
+    height: 100%;
+    background-color: var(--pastel-orange);
+}
+
+.rating-count {
+    width: 40px;
+    font-size: 0.9rem;
+    color: var(--light-grey);
+}
+
+.reviews-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.review-card {
+    background-color: var(--black);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-md);
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-md);
+}
+
+.reviewer {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.reviewer img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.reviewer-name {
+    font-weight: 500;
+}
+
+.review-date {
+    font-size: 0.8rem;
+    color: var(--light-grey);
+}
+
+.review-rating {
+    color: var(--pastel-orange);
+}
+
+.review-content h4 {
+    margin-bottom: var(--spacing-sm);
+}
+
+.review-content p {
+    margin-bottom: var(--spacing-md);
+    line-height: 1.6;
+}
+
+.review-purchased {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-size: 0.9rem;
+    color: var(--pastel-orange);
+}
+
+.view-all-reviews {
+    text-align: center;
+    display: block;
+    margin-top: var(--spacing-md);
+    padding: var(--spacing-md);
+    background-color: var(--medium-grey);
+    color: var(--white);
+    border-radius: var(--border-radius-md);
+    font-weight: 500;
+}
+
+.view-all-reviews:hover {
+    background-color: var(--light-grey);
+}
+
+/* Contact Section */
+.contact-dealer {
+    margin-bottom: var(--spacing-xl);
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    background-color: var(--dark-grey);
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+}
+
+.contact-info {
+    padding: var(--spacing-xl);
+}
+
+.contact-info h2 {
+    margin-bottom: var(--spacing-sm);
+}
+
+.contact-info > p {
+    margin-bottom: var(--spacing-lg);
+    color: var(--light-grey);
+}
+
+.contact-methods {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.contact-method {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.contact-method i {
+    font-size: 1.5rem;
+    color: var(--pastel-orange);
+}
+
+.contact-method h4 {
+    margin-bottom: var(--spacing-xs);
+    font-size: 1rem;
+}
+
+.contact-method p {
+    font-size: 0.9rem;
+    color: var(--light-grey);
+}
+
+.dealer-social h4 {
+    margin-bottom: var(--spacing-sm);
+}
+
+.social-icons {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--medium-blue);
+    color: var(--white);
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: var(--pastel-orange);
+    color: var(--dark-blue);
+}
+
+.contact-form {
+    padding: var(--spacing-xl);
+    background-color: var(--black);
+}
+
+.contact-form h3 {
+    margin-bottom: var(--spacing-lg);
+}
+
+.form-group {
+    margin-bottom: var(--spacing-md);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    font-size: 0.9rem;
+    color: var(--light-grey);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: var(--dark-grey);
+    color: var(--white);
+    border: 1px solid var(--medium-grey);
+    border-radius: var(--border-radius-sm);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--pastel-orange);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: var(--pastel-orange);
+    color: var(--dark-blue);
+    border-radius: var(--border-radius-sm);
+    font-weight: 500;
+    margin-top: var(--spacing-sm);
+}
+
+.submit-btn:hover {
+    background-color: #ff8c5a;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .dealer-profile-info {
+        grid-template-columns: auto 1fr;
+    }
+    
+    .dealer-actions {
+        grid-column: 1 / 3;
+        justify-content: flex-start;
+        margin-top: var(--spacing-md);
+    }
+    
+    .featured-item {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .dealer-profile-stats {
+        flex-wrap: wrap;
+        gap: var(--spacing-md) var(--spacing-lg);
+    }
+    
+    .review-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .overall-rating {
+        border-right: none;
+        border-bottom: 1px solid var(--medium-grey);
+        padding-right: 0;
+        padding-bottom: var(--spacing-md);
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .contact-methods {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .dealer-profile-info {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .dealer-profile-logo {
+        margin: 0 auto;
+    }
+    
+    .dealer-profile-stats {
+        justify-content: center;
+    }
+    
+    .dealer-actions {
+        grid-column: auto;
+        justify-content: center;
+    }
+    
+    .dealer-nav ul {
+        flex-wrap: wrap;
+    }
+    
+    .dealer-nav li {
+        flex: 0 0 50%;
+    }
+    
+    .filter-options {
+        flex-direction: column;
+    }
+    
+    .filter-btn {
+        margin-left: 0;
+        width: 100%;
+    }
+} 

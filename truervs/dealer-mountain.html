@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mountain RV - TrueRVs</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dealer-profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">TrueRVs</a>
+            </div>
+            <div class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="search.html">Find RVs</a></li>
+                    <li><a href="dealers.html" class="active">Dealers</a></li>
+                    <li><a href="sell.html">Sell Your RV</a></li>
+                </ul>
+            </div>
+            <div class="nav-icons">
+                <button class="ai-helper-btn" aria-label="Open AI Helper"><i class="fas fa-robot"></i> AI Helper</button>
+                <a href="account.html" class="account-btn"><i class="fas fa-user"></i></a>
+            </div>
+            <div class="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dealer Profile Header -->
+    <section class="dealer-profile-header">
+        <div class="dealer-cover">
+            <img src="https://placehold.co/1920x400/1e3a8a/ffffff" alt="Mountain RV Cover Photo">
+        </div>
+        <div class="container">
+            <div class="dealer-profile-info">
+                <div class="dealer-profile-logo">
+                    <img src="https://placehold.co/200x200" alt="Mountain RV Logo">
+                </div>
+                <div class="dealer-profile-details">
+                    <div class="dealer-profile-name">
+                        <h1>Mountain RV</h1>
+                        <div class="dealer-verification">
+                            <i class="fas fa-check-circle"></i> Verified Dealer
+                        </div>
+                    </div>
+                    <div class="dealer-profile-stats">
+                        <div class="stat">
+                            <span class="stat-value">52</span>
+                            <span class="stat-label">RVs</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">1.2k</span>
+                            <span class="stat-label">Followers</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">4.8</span>
+                            <span class="stat-label">Rating</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">124</span>
+                            <span class="stat-label">Reviews</span>
+                        </div>
+                    </div>
+                    <p class="dealer-bio">
+                        Premium RV dealer specializing in luxury motorhomes and travel trailers. Serving the Denver area for over 20 years with exceptional customer service and quality RVs.
+                    </p>
+                    <div class="dealer-contact-info">
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>1234 Mountain Road, Denver, CO 80202</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <span>(303) 555-1234</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-globe"></i>
+                            <span>www.mountainrv.com</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="dealer-actions">
+                    <button class="follow-btn">Follow</button>
+                    <button class="message-btn">Message</button>
+                    <button class="share-btn" aria-label="Share dealer profile"><i class="fas fa-share-alt"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dealer Navigation -->
+    <section class="dealer-nav">
+        <div class="container">
+            <ul>
+                <li><a href="#" class="active">Inventory</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Reviews</a></li>
+                <li><a href="#">Posts</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Featured Inventory -->
+    <section class="dealer-featured">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Inventory</h2>
+                <div class="controls">
+                    <button class="prev-btn" aria-label="Previous item"><i class="fas fa-chevron-left"></i></button>
+                    <button class="next-btn" aria-label="Next item"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+            <div class="featured-carousel">
+                <!-- Featured RV 1 -->
+                <div class="featured-item">
+                    <div class="featured-image">
+                        <img src="https://placehold.co/800x500/1e3a8a/ffffff" alt="2023 Airstream Atlas">
+                        <span class="featured-tag">Featured</span>
+                    </div>
+                    <div class="featured-details">
+                        <h3>2023 Airstream Atlas</h3>
+                        <p class="price">$225,000</p>
+                        <p class="description">
+                            Luxury Class B+ touring coach built on Mercedes-Benz® Sprinter van chassis with slide-out and premium amenities.
+                        </p>
+                        <div class="featured-specs">
+                            <div class="spec">
+                                <i class="fas fa-ruler"></i>
+                                <span>24 ft</span>
+                            </div>
+                            <div class="spec">
+                                <i class="fas fa-bed"></i>
+                                <span>Sleeps 4</span>
+                            </div>
+                            <div class="spec">
+                                <i class="fas fa-gas-pump"></i>
+                                <span>Diesel</span>
+                            </div>
+                            <div class="spec">
+                                <i class="fas fa-calendar"></i>
+                                <span>2023</span>
+                            </div>
+                        </div>
+                        <a href="#" class="view-details">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inventory Filter -->
+    <section class="inventory-filter">
+        <div class="container">
+            <div class="filter-options">
+                <div class="filter-group">
+                    <label for="type-filter">Type</label>
+                    <select id="type-filter" aria-label="Filter by RV type">
+                        <option value="">All Types</option>
+                        <option value="class-a">Class A</option>
+                        <option value="class-b">Class B</option>
+                        <option value="class-c">Class C</option>
+                        <option value="travel-trailer">Travel Trailer</option>
+                        <option value="fifth-wheel">Fifth Wheel</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="price-filter">Price Range</label>
+                    <select id="price-filter" aria-label="Filter by price range">
+                        <option value="">Any Price</option>
+                        <option value="0-50000">Under $50,000</option>
+                        <option value="50000-100000">$50,000 - $100,000</option>
+                        <option value="100000-200000">$100,000 - $200,000</option>
+                        <option value="200000+">$200,000+</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="length-filter">Length</label>
+                    <select id="length-filter" aria-label="Filter by RV length">
+                        <option value="">Any Length</option>
+                        <option value="0-20">Under 20 ft</option>
+                        <option value="20-30">20 - 30 ft</option>
+                        <option value="30-40">30 - 40 ft</option>
+                        <option value="40+">Over 40 ft</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="condition-filter">Condition</label>
+                    <select id="condition-filter" aria-label="Filter by condition">
+                        <option value="">Any Condition</option>
+                        <option value="new">New</option>
+                        <option value="used">Used</option>
+                    </select>
+                </div>
+                <button class="filter-btn">Apply Filters</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inventory Grid -->
+    <section class="inventory-grid">
+        <div class="container">
+            <div class="section-header">
+                <h2>All Inventory (52)</h2>
+                <div class="sort-options">
+                    <label for="sort-select">Sort by:</label>
+                    <select id="sort-select" aria-label="Sort inventory">
+                        <option value="newest">Newest First</option>
+                        <option value="price-high">Price (High to Low)</option>
+                        <option value="price-low">Price (Low to High)</option>
+                        <option value="length">Length</option>
+                        <option value="year">Year (Newest First)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="rv-grid">
+                <!-- RV Card 1 -->
+                <div class="rv-card">
+                    <div class="rv-image">
+                        <img src="https://placehold.co/600x400/1e3a8a/ffffff" alt="2023 Airstream Atlas">
+                    </div>
+                    <div class="rv-details">
+                        <h3>2023 Airstream Atlas</h3>
+                        <p class="price">$225,000</p>
+                        <div class="rv-specs">
+                            <span><i class="fas fa-ruler"></i> 24 ft</span>
+                            <span><i class="fas fa-bed"></i> Sleeps 4</span>
+                            <span><i class="fas fa-gas-pump"></i> Diesel</span>
+                        </div>
+                        <div class="rv-condition">
+                            <span class="condition-tag new">New</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- RV Card 2 -->
+                <div class="rv-card">
+                    <div class="rv-image">
+                        <img src="https://placehold.co/600x400/1e3a8a/ffffff" alt="2022 Winnebago Revel">
+                    </div>
+                    <div class="rv-details">
+                        <h3>2022 Winnebago Revel</h3>
+                        <p class="price">$175,900</p>
+                        <div class="rv-specs">
+                            <span><i class="fas fa-ruler"></i> 19.5 ft</span>
+                            <span><i class="fas fa-bed"></i> Sleeps 2</span>
+                            <span><i class="fas fa-gas-pump"></i> Diesel</span>
+                        </div>
+                        <div class="rv-condition">
+                            <span class="condition-tag used">Used</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- RV Card 3 -->
+                <div class="rv-card">
+                    <div class="rv-image">
+                        <img src="https://placehold.co/600x400/1e3a8a/ffffff" alt="2023 Newmar Dutch Star">
+                    </div>
+                    <div class="rv-details">
+                        <h3>2023 Newmar Dutch Star</h3>
+                        <p class="price">$389,950</p>
+                        <div class="rv-specs">
+                            <span><i class="fas fa-ruler"></i> 37 ft</span>
+                            <span><i class="fas fa-bed"></i> Sleeps 6</span>
+                            <span><i class="fas fa-gas-pump"></i> Diesel</span>
+                        </div>
+                        <div class="rv-condition">
+                            <span class="condition-tag new">New</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- RV Card 4 -->
+                <div class="rv-card">
+                    <div class="rv-image">
+                        <img src="https://placehold.co/600x400/1e3a8a/ffffff" alt="2022 Grand Design Reflection">
+                    </div>
+                    <div class="rv-details">
+                        <h3>2022 Grand Design Reflection</h3>
+                        <p class="price">$74,900</p>
+                        <div class="rv-specs">
+                            <span><i class="fas fa-ruler"></i> 31 ft</span>
+                            <span><i class="fas fa-bed"></i> Sleeps 8</span>
+                            <span><i class="fas fa-weight"></i> 9,900 lbs</span>
+                        </div>
+                        <div class="rv-condition">
+                            <span class="condition-tag used">Used</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- RV Card 5 -->
+                <div class="rv-card">
+                    <div class="rv-image">
+                        <img src="https://placehold.co/600x400/1e3a8a/ffffff" alt="2023 Coachmen Beyond">
+                    </div>
+                    <div class="rv-details">
+                        <h3>2023 Coachmen Beyond</h3>
+                        <p class="price">$189,000</p>
+                        <div class="rv-specs">
+                            <span><i class="fas fa-ruler"></i> 22 ft</span>
+                            <span><i class="fas fa-bed"></i> Sleeps 2</span>
+                            <span><i class="fas fa-gas-pump"></i> Diesel</span>
+                        </div>
+                        <div class="rv-condition">
+                            <span class="condition-tag new">New</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- RV Card 6 -->
+                <div class="rv-card">
+                    <div class="rv-image">
+                        <img src="https://placehold.co/600x400/1e3a8a/ffffff" alt="2021 Keystone Montana">
+                    </div>
+                    <div class="rv-details">
+                        <h3>2021 Keystone Montana</h3>
+                        <p class="price">$68,500</p>
+                        <div class="rv-specs">
+                            <span><i class="fas fa-ruler"></i> 35 ft</span>
+                            <span><i class="fas fa-bed"></i> Sleeps 6</span>
+                            <span><i class="fas fa-weight"></i> 12,300 lbs</span>
+                        </div>
+                        <div class="rv-condition">
+                            <span class="condition-tag used">Used</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pagination -->
+            <div class="pagination">
+                <a href="#" class="page active">1</a>
+                <a href="#" class="page">2</a>
+                <a href="#" class="page">3</a>
+                <a href="#" class="page">4</a>
+                <a href="#" class="page">5</a>
+                <a href="#" class="next-page"><i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dealer Reviews Section -->
+    <section class="dealer-reviews">
+        <div class="container">
+            <div class="section-header">
+                <h2>Customer Reviews</h2>
+                <a href="#" class="write-review-btn">Write a Review</a>
+            </div>
+            <div class="review-stats">
+                <div class="overall-rating">
+                    <div class="rating-number">4.8</div>
+                    <div class="rating-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="total-reviews">Based on 124 reviews</div>
+                </div>
+                <div class="rating-breakdown">
+                    <div class="rating-bar">
+                        <span class="rating-label">5 Stars</span>
+                        <div class="bar-container">
+                            <div class="bar" style="width: 75%"></div>
+                        </div>
+                        <span class="rating-count">93</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span class="rating-label">4 Stars</span>
+                        <div class="bar-container">
+                            <div class="bar" style="width: 15%"></div>
+                        </div>
+                        <span class="rating-count">19</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span class="rating-label">3 Stars</span>
+                        <div class="bar-container">
+                            <div class="bar" style="width: 6%"></div>
+                        </div>
+                        <span class="rating-count">7</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span class="rating-label">2 Stars</span>
+                        <div class="bar-container">
+                            <div class="bar" style="width: 3%"></div>
+                        </div>
+                        <span class="rating-count">4</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span class="rating-label">1 Star</span>
+                        <div class="bar-container">
+                            <div class="bar" style="width: 1%"></div>
+                        </div>
+                        <span class="rating-count">1</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Recent Reviews -->
+            <div class="reviews-list">
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer">
+                            <img src="https://placehold.co/50x50" alt="Reviewer Avatar">
+                            <div class="reviewer-info">
+                                <div class="reviewer-name">John D.</div>
+                                <div class="review-date">October 15, 2023</div>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <h4>Amazing Experience!</h4>
+                        <p>
+                            I recently purchased a 2023 Airstream Atlas from Mountain RV and couldn't be happier with the experience. The sales team was knowledgeable and patient, walking me through all the features and options. The financing process was smooth, and they even delivered the RV to my home. Highly recommend!
+                        </p>
+                    </div>
+                    <div class="review-purchased">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Purchased: 2023 Airstream Atlas</span>
+                    </div>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer">
+                            <img src="https://placehold.co/50x50" alt="Reviewer Avatar">
+                            <div class="reviewer-info">
+                                <div class="reviewer-name">Sarah L.</div>
+                                <div class="review-date">September 28, 2023</div>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <h4>Great Selection, Good Service</h4>
+                        <p>
+                            Mountain RV had the best selection of Class B and Class C RVs in the Denver area. We ultimately went with the Winnebago Revel and have been very happy with it. The only reason for 4 stars instead of 5 is that the delivery was delayed by a week. Otherwise, a great buying experience.
+                        </p>
+                    </div>
+                    <div class="review-purchased">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Purchased: 2022 Winnebago Revel</span>
+                    </div>
+                </div>
+                
+                <a href="#" class="view-all-reviews">View All 124 Reviews</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Dealer -->
+    <section class="contact-dealer">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h2>Contact Mountain RV</h2>
+                    <p>Have questions about our RVs or services? Reach out to us!</p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Visit Us</h4>
+                                <p>1234 Mountain Road<br>Denver, CO 80202</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Call Us</h4>
+                                <p>(303) 555-1234</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email Us</h4>
+                                <p>info@mountainrv.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Business Hours</h4>
+                                <p>Monday-Friday: 9am-6pm<br>Saturday: 10am-5pm<br>Sunday: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dealer-social">
+                        <h4>Follow Us</h4>
+                        <div class="social-icons">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Send us a Message</h3>
+                    <form action="#" method="post">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="interest">Interested In</label>
+                            <select id="interest" name="interest" aria-label="Subject of interest">
+                                <option value="">Select an option</option>
+                                <option value="purchase">Purchasing an RV</option>
+                                <option value="trade-in">Trade-in Information</option>
+                                <option value="financing">Financing Options</option>
+                                <option value="service">Service Department</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Helper (minimized by default) -->
+    <div class="ai-helper">
+        <div class="ai-helper-header">
+            <h3><i class="fas fa-robot"></i> RV Assistant</h3>
+            <button class="close-ai" aria-label="Close AI Assistant"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="ai-helper-body">
+            <p>Hi! I can help you find the perfect RV based on your needs. What are you looking for?</p>
+            <div class="ai-input">
+                <input type="text" placeholder="Ask me anything about RVs...">
+                <button aria-label="Send message"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>TrueRVs</h2>
+                    <p>Find your perfect RV journey</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Browse</h3>
+                        <ul>
+                            <li><a href="search.html">All RVs</a></li>
+                            <li><a href="#">Class A Motorhomes</a></li>
+                            <li><a href="#">Class B Campervans</a></li>
+                            <li><a href="#">Class C Motorhomes</a></li>
+                            <li><a href="#">Travel Trailers</a></li>
+                            <li><a href="#">Fifth Wheels</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Resources</h3>
+                        <ul>
+                            <li><a href="#">RV Buyer's Guide</a></li>
+                            <li><a href="#">Selling Tips</a></li>
+                            <li><a href="#">Financing</a></li>
+                            <li><a href="#">Insurance</a></li>
+                            <li><a href="#">RV Maintenance</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 TrueRVs. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

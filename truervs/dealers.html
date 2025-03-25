@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dealers - TrueRVs</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">TrueRVs</a>
+            </div>
+            <div class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="search.html">Find RVs</a></li>
+                    <li><a href="dealers.html" class="active">Dealers</a></li>
+                    <li><a href="sell.html">Sell Your RV</a></li>
+                </ul>
+            </div>
+            <div class="nav-icons">
+                <button class="ai-helper-btn" aria-label="Open AI Helper"><i class="fas fa-robot"></i> AI Helper</button>
+                <a href="account.html" class="account-btn"><i class="fas fa-user"></i></a>
+            </div>
+            <div class="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dealers Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>RV Dealers</h1>
+            <p>Connect with trusted RV dealers across the country</p>
+            
+            <div class="dealer-search-container">
+                <div class="dealer-search-box">
+                    <div class="search-fields">
+                        
+                        <div class="search-field">
+                            <label for="dealer-location">Location</label>
+                            <input type="text" id="dealer-location" placeholder="City, state, or zip">
+                        </div>
+                        
+                        
+                    </div>
+                    <button class="search-btn" aria-label="Search Dealers"><i class="fas fa-search"></i> Find Dealers</button>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Featured Dealers -->
+    <section class="featured-dealers">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Dealers</h2>
+                <div class="filter-controls">
+                    <span>Sort by:</span>
+                    <select aria-label="Sort dealers by">
+                        <option>Popularity</option>
+                        <option>Highest Rated</option>
+                        <option>Newest</option>
+                        <option>Inventory Size</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="dealer-grid">
+                <!-- Dealer 1 -->
+                <div class="dealer-card large">
+                    <div class="dealer-banner">
+                        <img src="https://placehold.co/1200x300/1e3a8a/ffffff" alt="Mountain RV Dealership">
+                        <div class="dealer-logo-banner">
+                            <img src="https://placehold.co/150x150" alt="Mountain RV Logo">
+                        </div>
+                    </div>
+                    <div class="dealer-info-large">
+                        <div class="dealer-header">
+                            <h3>Mountain RV</h3>
+                            <button class="follow-btn">Follow</button>
+                        </div>
+                        <div class="dealer-stats">
+                            <span><i class="fas fa-star"></i> 4.8/5</span>
+                            <span><i class="fas fa-user-friends"></i> 1.2k Followers</span>
+                            <span><i class="fas fa-truck-moving"></i> 52 RVs</span>
+                        </div>
+                        <p class="dealer-description">
+                            Premium RV dealer specializing in luxury motorhomes and travel trailers. Serving the Denver area for over 20 years.
+                        </p>
+                        <div class="dealer-contact">
+                            <p><i class="fas fa-map-marker-alt"></i> 1234 Mountain Road, Denver, CO</p>
+                            <p><i class="fas fa-phone"></i> (303) 555-1234</p>
+                            <a href="dealer-mountain.html" class="view-profile">View Profile</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Dealer 2 -->
+                <div class="dealer-card large">
+                    <div class="dealer-banner">
+                        <img src="https://placehold.co/1200x300/1e3a8a/ffffff" alt="Family RVs Dealership">
+                        <div class="dealer-logo-banner">
+                            <img src="https://placehold.co/150x150" alt="Family RVs Logo">
+                        </div>
+                    </div>
+                    <div class="dealer-info-large">
+                        <div class="dealer-header">
+                            <h3>Family RVs</h3>
+                            <button class="follow-btn">Follow</button>
+                        </div>
+                        <div class="dealer-stats">
+                            <span><i class="fas fa-star"></i> 4.6/5</span>
+                            <span><i class="fas fa-user-friends"></i> 950 Followers</span>
+                            <span><i class="fas fa-truck-moving"></i> 38 RVs</span>
+                        </div>
+                        <p class="dealer-description">
+                            Family-owned dealership offering a wide range of family-friendly RVs, travel trailers, and fifth wheels.
+                        </p>
+                        <div class="dealer-contact">
+                            <p><i class="fas fa-map-marker-alt"></i> 789 Desert View, Phoenix, AZ</p>
+                            <p><i class="fas fa-phone"></i> (602) 555-6789</p>
+                            <a href="dealer-family.html" class="view-profile">View Profile</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- All Dealers -->
+    <section class="all-dealers">
+        <div class="container">
+            <div class="section-header">
+                <h2>All Dealers</h2>
+            </div>
+            
+            <div class="dealer-grid">
+                <!-- Dealer Card 1 -->
+                <div class="dealer-card">
+                    <div class="dealer-logo">
+                        <img src="https://placehold.co/100x100" alt="Premium RV Logo">
+                    </div>
+                    <div class="dealer-info">
+                        <h3>Premium RV</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Austin, TX</p>
+                        <div class="dealer-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(120 reviews)</span>
+                        </div>
+                        <div class="dealer-highlights">
+                            <span class="inventory">64 RVs</span>
+                            <span class="dealer-type">New & Used</span>
+                        </div>
+                        <a href="dealer-premium.html" class="view-profile">View Profile</a>
+                    </div>
+                </div>
+                
+                <!-- Dealer Card 2 -->
+                <div class="dealer-card">
+                    <div class="dealer-logo">
+                        <img src="https://placehold.co/100x100" alt="Lakeside RVs Logo">
+                    </div>
+                    <div class="dealer-info">
+                        <h3>Lakeside RVs</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Chicago, IL</p>
+                        <div class="dealer-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(87 reviews)</span>
+                        </div>
+                        <div class="dealer-highlights">
+                            <span class="inventory">42 RVs</span>
+                            <span class="dealer-type">Used Only</span>
+                        </div>
+                        <a href="dealer-lakeside.html" class="view-profile">View Profile</a>
+                    </div>
+                </div>
+                
+                <!-- Dealer Card 3 -->
+                <div class="dealer-card">
+                    <div class="dealer-logo">
+                        <img src="https://placehold.co/100x100" alt="Sunshine RVs Logo">
+                    </div>
+                    <div class="dealer-info">
+                        <h3>Sunshine RVs</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Miami, FL</p>
+                        <div class="dealer-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(203 reviews)</span>
+                        </div>
+                        <div class="dealer-highlights">
+                            <span class="inventory">78 RVs</span>
+                            <span class="dealer-type">New & Used</span>
+                        </div>
+                        <a href="dealer-sunshine.html" class="view-profile">View Profile</a>
+                    </div>
+                </div>
+                
+                <!-- Dealer Card 4 -->
+                <div class="dealer-card">
+                    <div class="dealer-logo">
+                        <img src="https://placehold.co/100x100" alt="Northwest RV Logo">
+                    </div>
+                    <div class="dealer-info">
+                        <h3>Northwest RV</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Seattle, WA</p>
+                        <div class="dealer-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(95 reviews)</span>
+                        </div>
+                        <div class="dealer-highlights">
+                            <span class="inventory">51 RVs</span>
+                            <span class="dealer-type">New & Used</span>
+                        </div>
+                        <a href="dealer-northwest.html" class="view-profile">View Profile</a>
+                    </div>
+                </div>
+                
+                <!-- Dealer Card 5 -->
+                <div class="dealer-card">
+                    <div class="dealer-logo">
+                        <img src="https://placehold.co/100x100" alt="Valley RVs Logo">
+                    </div>
+                    <div class="dealer-info">
+                        <h3>Valley RVs</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Los Angeles, CA</p>
+                        <div class="dealer-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                            <span>(64 reviews)</span>
+                        </div>
+                        <div class="dealer-highlights">
+                            <span class="inventory">35 RVs</span>
+                            <span class="dealer-type">Used Only</span>
+                        </div>
+                        <a href="dealer-valley.html" class="view-profile">View Profile</a>
+                    </div>
+                </div>
+                
+                <!-- Dealer Card 6 -->
+                <div class="dealer-card">
+                    <div class="dealer-logo">
+                        <img src="https://placehold.co/100x100" alt="East Coast RVs Logo">
+                    </div>
+                    <div class="dealer-info">
+                        <h3>East Coast RVs</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> New York, NY</p>
+                        <div class="dealer-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(112 reviews)</span>
+                        </div>
+                        <div class="dealer-highlights">
+                            <span class="inventory">47 RVs</span>
+                            <span class="dealer-type">New & Used</span>
+                        </div>
+                        <a href="dealer-eastcoast.html" class="view-profile">View Profile</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pagination -->
+            <div class="pagination">
+                <a href="#" class="page active">1</a>
+                <a href="#" class="page">2</a>
+                <a href="#" class="page">3</a>
+                <a href="#" class="page">4</a>
+                <a href="#" class="page">5</a>
+                <a href="#" class="next-page"><i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Helper (minimized by default) -->
+    <div class="ai-helper">
+        <div class="ai-helper-header">
+            <h3><i class="fas fa-robot"></i> RV Assistant</h3>
+            <button class="close-ai" aria-label="Close AI Assistant"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="ai-helper-body">
+            <p>Hi! I can help you find the perfect RV based on your needs. What are you looking for?</p>
+            <div class="ai-input">
+                <input type="text" placeholder="Ask me anything about RVs...">
+                <button aria-label="Send message"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>TrueRVs</h2>
+                    <p>Find your perfect RV journey</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Browse</h3>
+                        <ul>
+                            <li><a href="search.html">All RVs</a></li>
+                            <li><a href="#">Class A Motorhomes</a></li>
+                            <li><a href="#">Class B Campervans</a></li>
+                            <li><a href="#">Class C Motorhomes</a></li>
+                            <li><a href="#">Travel Trailers</a></li>
+                            <li><a href="#">Fifth Wheels</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Resources</h3>
+                        <ul>
+                            <li><a href="#">RV Buyer's Guide</a></li>
+                            <li><a href="#">Selling Tips</a></li>
+                            <li><a href="#">Financing</a></li>
+                            <li><a href="#">Insurance</a></li>
+                            <li><a href="#">RV Maintenance</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 TrueRVs. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

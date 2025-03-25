@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrueRVs - Find Your Perfect RV</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">TrueRVs</a>
+            </div>
+            <div class="nav-menu">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="search.html">Find RVs</a></li>
+                    <li><a href="dealers.html">Dealers</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="rv-value.html">RV Value</a></li>
+                    <li><a href="sell.html">Sell Your RV</a></li>
+                </ul>
+            </div>
+            <div class="nav-icons">
+                <button class="ai-helper-btn" aria-label="Open AI Helper"><i class="fas fa-robot"></i> AI Helper</button>
+                <a href="account.html" class="account-btn"><i class="fas fa-user"></i></a>
+            </div>
+            <div class="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="search-box">
+                <h1>Find Your Dream RV</h1>
+                <p>Browse thousands of RVs from trusted dealers and private sellers</p>
+                <div class="search-fields">
+                    <div class="search-field">
+                        <label for="keyword">Make/Model/Keyword</label>
+                        <input type="text" id="keyword" placeholder="Enter make, model or keyword">
+                    </div>
+                    <div class="search-field location-field">
+                        <label for="zipcode">Zip Code</label>
+                        <input type="text" id="zipcode" placeholder="Enter zip code">
+                    </div>
+                    <div class="search-field distance-field">
+                        <label for="distance">Distance</label>
+                        <select id="distance">
+                            <option value="25">25 miles</option>
+                            <option value="50">50 miles</option>
+                            <option value="100" selected>100 miles</option>
+                            <option value="200">200 miles</option>
+                            <option value="anywhere">Anywhere</option>
+                        </select>
+                    </div>
+                </div>
+                <button class="search-btn" aria-label="Search"><i class="fas fa-search"></i> Find RVs</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- RV Type Selector for Beginners -->
+    <section class="rv-type-guide">
+        <div class="container">
+            <div class="section-header">
+                <h2>New to RVs? Explore RV Types</h2>
+                <p>Scroll through common RV types to find what fits your lifestyle</p>
+            </div>
+            <div class="rv-types-scroll">
+                <div class="rv-type-card">
+                    <div class="rv-type-image">
+                        <img src="https://placehold.co/300x200/1e3a8a/ffffff" alt="Class A Motorhome">
+                    </div>
+                    <h3>Class A Motorhome</h3>
+                    <p>Luxury home on wheels with plenty of space and amenities</p>
+                    <ul class="rv-features">
+                        <li>30-45 feet in length</li>
+                        <li>Sleeps 2-8 people</li>
+                        <li>Full kitchen and bathroom</li>
+                    </ul>
+                    <a href="#" class="learn-more">Learn More</a>
+                </div>
+                
+                <div class="rv-type-card">
+                    <div class="rv-type-image">
+                        <img src="https://placehold.co/300x200/1e3a8a/ffffff" alt="Class B Campervan">
+                    </div>
+                    <h3>Class B Campervan</h3>
+                    <p>Compact and maneuverable van-based RVs for the adventurous</p>
+                    <ul class="rv-features">
+                        <li>17-23 feet in length</li>
+                        <li>Sleeps 1-4 people</li>
+                        <li>Efficient use of space</li>
+                    </ul>
+                    <a href="#" class="learn-more">Learn More</a>
+                </div>
+                
+                <div class="rv-type-card">
+                    <div class="rv-type-image">
+                        <img src="https://placehold.co/300x200/1e3a8a/ffffff" alt="Class C Motorhome">
+                    </div>
+                    <h3>Class C Motorhome</h3>
+                    <p>Mid-sized option with distinctive over-cab sleeping area</p>
+                    <ul class="rv-features">
+                        <li>20-33 feet in length</li>
+                        <li>Sleeps 4-8 people</li>
+                        <li>Good balance of size and features</li>
+                    </ul>
+                    <a href="#" class="learn-more">Learn More</a>
+                </div>
+                
+                <div class="rv-type-card">
+                    <div class="rv-type-image">
+                        <img src="https://placehold.co/300x200/1e3a8a/ffffff" alt="Travel Trailer">
+                    </div>
+                    <h3>Travel Trailer</h3>
+                    <p>Towable RVs offering flexibility and various size options</p>
+                    <ul class="rv-features">
+                        <li>10-40 feet in length</li>
+                        <li>Sleeps 2-10 people</li>
+                        <li>Requires separate tow vehicle</li>
+                    </ul>
+                    <a href="#" class="learn-more">Learn More</a>
+                </div>
+                
+                <div class="rv-type-card">
+                    <div class="rv-type-image">
+                        <img src="https://placehold.co/300x200/1e3a8a/ffffff" alt="Fifth Wheel">
+                    </div>
+                    <h3>Fifth Wheel</h3>
+                    <p>Large towable RVs with bi-level floor plans and spacious interiors</p>
+                    <ul class="rv-features">
+                        <li>25-45 feet in length</li>
+                        <li>Sleeps 4-8 people</li>
+                        <li>Requires pickup truck with special hitch</li>
+                    </ul>
+                    <a href="#" class="learn-more">Learn More</a>
+                </div>
+                
+                <div class="rv-type-card">
+                    <div class="rv-type-image">
+                        <img src="https://placehold.co/300x200/1e3a8a/ffffff" alt="Fish House">
+                    </div>
+                    <h3>Fish House</h3>
+                    <p>Specialized RVs designed for ice fishing with living quarters</p>
+                    <ul class="rv-features">
+                        <li>16-30 feet in length</li>
+                        <li>Ice fishing holes in floor</li>
+                        <li>Cold-weather insulation</li>
+                    </ul>
+                    <a href="#" class="learn-more">Learn More</a>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span>Scroll to see more <i class="fas fa-arrow-right"></i></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured RVs -->
+    <section class="featured">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured RVs</h2>
+                <a href="search.html" class="view-all">View All</a>
+            </div>
+            <div class="rv-grid">
+                <!-- RV Card 1 -->
+                <div class="rv-card">
+                    <div class="rv-image">
+                        <img src="https://placehold.co/600x400/1e3a8a/ffffff" alt="Featured RV">
+                        <div class="dealer-badge">
+                            <img src="https://placehold.co/30x30" alt="Dealer Logo">
+                            <span>Premium Dealer</span>
+                        </div>
+                    </div>
+                    <div class="rv-details">
+                        <h3>2023 Airstream Atlas</h3>
+                        <p class="price">$225,000</p>
+                        <div class="rv-specs">
+                            <span><i class="fas fa-ruler"></i> 24 ft</span>
+                            <span><i class="fas fa-bed"></i> Sleeps 4</span>
+                            <span><i class="fas fa-gas-pump"></i> Diesel</span>
+                        </div>
+                        <div class="rv-location">
+                            <i class="fas fa-map-marker-alt"></i> Denver, CO
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- RV Card 2 -->
+                <div class="rv-card">
+                    <div class="rv-image">
+                        <img src="https://placehold.co/600x400/1e3a8a/ffffff" alt="Featured RV">
+                        <div class="dealer-badge">
+                            <img src="https://placehold.co/30x30" alt="Dealer Logo">
+                            <span>Mountain RV</span>
+                        </div>
+                    </div>
+                    <div class="rv-details">
+                        <h3>2022 Winnebago Revel</h3>
+                        <p class="price">$175,900</p>
+                        <div class="rv-specs">
+                            <span><i class="fas fa-ruler"></i> 19.5 ft</span>
+                            <span><i class="fas fa-bed"></i> Sleeps 2</span>
+                            <span><i class="fas fa-gas-pump"></i> Diesel</span>
+                        </div>
+                        <div class="rv-location">
+                            <i class="fas fa-map-marker-alt"></i> Boulder, CO
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- RV Card 3 -->
+                <div class="rv-card">
+                    <div class="rv-image">
+                        <img src="https://placehold.co/600x400/1e3a8a/ffffff" alt="Featured RV">
+                        <div class="dealer-badge">
+                            <img src="https://placehold.co/30x30" alt="Dealer Logo">
+                            <span>Family RVs</span>
+                        </div>
+                    </div>
+                    <div class="rv-details">
+                        <h3>2021 Jayco Eagle HT</h3>
+                        <p class="price">$42,500</p>
+                        <div class="rv-specs">
+                            <span><i class="fas fa-ruler"></i> 29 ft</span>
+                            <span><i class="fas fa-bed"></i> Sleeps 8</span>
+                            <span><i class="fas fa-weight"></i> 7,250 lbs</span>
+                        </div>
+                        <div class="rv-location">
+                            <i class="fas fa-map-marker-alt"></i> Phoenix, AZ
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Dealers -->
+    <section class="dealers">
+        <div class="container">
+            <div class="section-header">
+                <h2>Top Dealers</h2>
+                <a href="dealers.html" class="view-all">View All</a>
+            </div>
+            <div class="dealer-grid">
+                <!-- Dealer 1 -->
+                <div class="dealer-card">
+                    <div class="dealer-logo">
+                        <img src="https://placehold.co/100x100" alt="Mountain RV Logo">
+                    </div>
+                    <div class="dealer-info">
+                        <h3>Mountain RV</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Denver, CO</p>
+                        <p><i class="fas fa-check-circle"></i> Verified Dealer</p>
+                        <span class="inventory">52 RVs</span>
+                    </div>
+                </div>
+                
+                <!-- Dealer 2 -->
+                <div class="dealer-card">
+                    <div class="dealer-logo">
+                        <img src="https://placehold.co/100x100" alt="Family RVs Logo">
+                    </div>
+                    <div class="dealer-info">
+                        <h3>Family RVs</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Phoenix, AZ</p>
+                        <p><i class="fas fa-check-circle"></i> Verified Dealer</p>
+                        <span class="inventory">38 RVs</span>
+                    </div>
+                </div>
+                
+                <!-- Dealer 3 -->
+                <div class="dealer-card">
+                    <div class="dealer-logo">
+                        <img src="https://placehold.co/100x100" alt="Premium RV Logo">
+                    </div>
+                    <div class="dealer-info">
+                        <h3>Premium RV</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Austin, TX</p>
+                        <p><i class="fas fa-check-circle"></i> Verified Dealer</p>
+                        <span class="inventory">64 RVs</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Helper (minimized by default) -->
+    <div class="ai-helper">
+        <div class="ai-helper-header">
+            <h3><i class="fas fa-robot"></i> RV Assistant</h3>
+            <button class="close-ai" aria-label="Close AI Assistant"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="ai-helper-body">
+            <p>Hi! I can help you find the perfect RV based on your needs. What are you looking for?</p>
+            <div class="ai-input">
+                <input type="text" placeholder="Ask me anything about RVs...">
+                <button aria-label="Send message"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>TrueRVs</h2>
+                    <p>Find your perfect RV journey</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Browse</h3>
+                        <ul>
+                            <li><a href="search.html">All RVs</a></li>
+                            <li><a href="#">Class A Motorhomes</a></li>
+                            <li><a href="#">Class B Campervans</a></li>
+                            <li><a href="#">Class C Motorhomes</a></li>
+                            <li><a href="#">Travel Trailers</a></li>
+                            <li><a href="#">Fifth Wheels</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Resources</h3>
+                        <ul>
+                            <li><a href="#">RV Buyer's Guide</a></li>
+                            <li><a href="#">Selling Tips</a></li>
+                            <li><a href="#">Financing</a></li>
+                            <li><a href="#">Insurance</a></li>
+                            <li><a href="#">RV Maintenance</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 TrueRVs. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 
