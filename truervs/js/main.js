@@ -1,5 +1,10 @@
+// Import configuration
+import config from './config.js';
+
 // Wait for the DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
+    console.log(`TrueRVs app running on ${config.SITE_URL}`);
+    
     // Mobile menu toggle
     const mobileToggle = document.querySelector('.mobile-toggle');
     const navMenu = document.querySelector('.nav-menu');

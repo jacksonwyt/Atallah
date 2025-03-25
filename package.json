@@ -1,0 +1,16 @@
+{
+  "name": "atallah-rv",
+  "version": "1.0.0",
+  "description": "TrueRVs dealer website",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "vercel build",
+    "deploy": "vercel deploy --prod"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3"
+  },
+  "devDependencies": {
+    "vercel": "^28.16.0"
+  }
+} 

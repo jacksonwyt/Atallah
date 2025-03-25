@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "truervs/**", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/truervs/$1" }
+  ],
+  "env": {
+    "API_URL": "https://api.truervs.com",
+    "ENABLE_AI_HELPER": "true",
+    "MAX_SEARCH_RESULTS": "24",
+    "DEFAULT_LOCATION": "Denver, CO"
+  },
+  "buildCommand": "npm run build",
+  "outputDirectory": "truervs"
+} 
