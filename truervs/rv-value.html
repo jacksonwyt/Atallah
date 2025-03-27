@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RV Value - TrueRVs</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">TrueRVs</a>
+            </div>
+            <div class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="rv-listings.html">Buy RVs</a></li>
+                    <li><a href="sell-your-rv.html">Sell Your RV</a></li>
+                    <li><a href="dealers.html">Dealers</a></li>
+                    <li><a href="rv-value.html" class="active">RV Value</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+            <div class="nav-icons">
+                <button class="ai-helper-btn" title="Open AI Helper">
+                    <i class="fas fa-robot" aria-hidden="true"></i>
+                    <span>AI Helper</span>
+                </button>
+                <button class="account-btn" title="Account Menu">
+                    <i class="fas fa-user" aria-hidden="true"></i>
+                    <span class="sr-only">Account</span>
+                </button>
+            </div>
+            <div class="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- RV Value Hero -->
+    <section class="value-hero">
+        <div class="container">
+            <h1>RV Value Estimator</h1>
+            <p class="subtitle">Get an accurate estimate of your RV's current market value</p>
+        </div>
+    </section>
+
+    <!-- Value Estimation Form -->
+    <section class="value-form-section">
+        <div class="container">
+            <div class="value-form-container">
+                <form id="valueForm" class="value-form">
+                    <h2>Tell Us About Your RV</h2>
+                    <p>Fill out the details below to get an instant estimate</p>
+                    
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="rvType">RV Type</label>
+                            <select id="rvType" name="rvType" required>
+                                <option value="">Select RV Type</option>
+                                <option value="class-a">Class A Motorhome</option>
+                                <option value="class-b">Class B Motorhome</option>
+                                <option value="class-c">Class C Motorhome</option>
+                                <option value="travel-trailer">Travel Trailer</option>
+                                <option value="fifth-wheel">Fifth Wheel</option>
+                                <option value="popup">Pop-up Camper</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="make">Make</label>
+                            <input type="text" id="make" name="make" placeholder="e.g., Winnebago" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="model">Model</label>
+                            <input type="text" id="model" name="model" placeholder="e.g., Minnie Winnie" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="year">Year</label>
+                            <input type="number" id="year" name="year" min="1900" max="2024" placeholder="e.g., 2020" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="length">Length (feet)</label>
+                            <input type="number" id="length" name="length" min="1" max="100" placeholder="e.g., 25" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="condition">Condition</label>
+                            <select id="condition" name="condition" required>
+                                <option value="">Select Condition</option>
+                                <option value="excellent">Excellent</option>
+                                <option value="good">Good</option>
+                                <option value="fair">Fair</option>
+                                <option value="poor">Poor</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="mileage">Mileage (for motorized RVs)</label>
+                            <input type="number" id="mileage" name="mileage" placeholder="e.g., 25000">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="slideouts">Number of Slide-outs</label>
+                            <select id="slideouts" name="slideouts">
+                                <option value="0">None</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4+">4 or more</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="additional-features">
+                        <h3>Additional Features</h3>
+                        <div class="features-grid">
+                            <label class="feature-checkbox">
+                                <input type="checkbox" name="features" value="solar">
+                                <span>Solar Power</span>
+                            </label>
+                            <label class="feature-checkbox">
+                                <input type="checkbox" name="features" value="generator">
+                                <span>Generator</span>
+                            </label>
+                            <label class="feature-checkbox">
+                                <input type="checkbox" name="features" value="leveling">
+                                <span>Auto Leveling</span>
+                            </label>
+                            <label class="feature-checkbox">
+                                <input type="checkbox" name="features" value="washer-dryer">
+                                <span>Washer/Dryer</span>
+                            </label>
+                            <label class="feature-checkbox">
+                                <input type="checkbox" name="features" value="outdoor-kitchen">
+                                <span>Outdoor Kitchen</span>
+                            </label>
+                            <label class="feature-checkbox">
+                                <input type="checkbox" name="features" value="satellite">
+                                <span>Satellite System</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="zipcode">Your Zip Code</label>
+                        <input type="text" id="zipcode" name="zipcode" placeholder="For regional price adjustment" required>
+                    </div>
+                    
+                    <button type="submit" class="value-submit-btn">
+                        <i class="fas fa-calculator" aria-hidden="true"></i>
+                        Calculate Value
+                    </button>
+                </form>
+            </div>
+            
+            <div class="value-info">
+                <div class="value-card">
+                    <h3>How Our Value Estimator Works</h3>
+                    <p>Our advanced algorithm analyzes thousands of recent RV sales to provide you with the most accurate value estimate possible.</p>
+                    <ul>
+                        <li>Compares similar RVs in your area</li>
+                        <li>Adjusts for seasonal market conditions</li>
+                        <li>Accounts for specific features and options</li>
+                        <li>Considers regional price variations</li>
+                    </ul>
+                </div>
+                
+                <div class="value-tips">
+                    <h3>Factors That Affect RV Value</h3>
+                    <div class="tips-grid">
+                        <div class="tip-item">
+                            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                            <h4>Age</h4>
+                            <p>Newer RVs typically hold their value better than older models.</p>
+                        </div>
+                        <div class="tip-item">
+                            <i class="fas fa-tachometer-alt" aria-hidden="true"></i>
+                            <h4>Mileage</h4>
+                            <p>Lower mileage generally means higher value for motorized RVs.</p>
+                        </div>
+                        <div class="tip-item">
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <h4>Condition</h4>
+                            <p>Well-maintained RVs with minimal wear and tear command higher prices.</p>
+                        </div>
+                        <div class="tip-item">
+                            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                            <h4>Location</h4>
+                            <p>Market demand varies by region, affecting local prices.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>TrueRVs</h2>
+                    <p>Your trusted partner in finding the perfect RV</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="rv-listings.html">Buy RVs</a></li>
+                            <li><a href="sell-your-rv.html">Sell Your RV</a></li>
+                            <li><a href="dealers.html">Dealers</a></li>
+                            <li><a href="rv-value.html">RV Value</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>RV Types</h3>
+                        <ul>
+                            <li><a href="rv-listings.html">Class A Motorhomes</a></li>
+                            <li><a href="rv-listings.html">Class B Campervans</a></li>
+                            <li><a href="rv-listings.html">Class C Motorhomes</a></li>
+                            <li><a href="rv-listings.html">Travel Trailers</a></li>
+                            <li><a href="rv-listings.html">Fifth Wheels</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Resources</h3>
+                        <ul>
+                            <li><a href="#">Financing</a></li>
+                            <li><a href="#">Insurance</a></li>
+                            <li><a href="#">RV Guide</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TrueRVs. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

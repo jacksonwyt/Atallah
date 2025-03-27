@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - TrueRVs</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">TrueRVs</a>
+            </div>
+            <div class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="rv-listings.html">RVs</a></li>
+                    <li><a href="dealers.html">Dealers</a></li>
+                    <li><a href="sell-your-rv.html">Sell Your RV</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-icons">
+                <button class="ai-helper-btn" title="Open AI Helper">
+                    <i class="fas fa-robot" aria-hidden="true"></i>
+                    <span>AI Helper</span>
+                </button>
+                <button class="account-btn" title="Account Menu">
+                    <i class="fas fa-user" aria-hidden="true"></i>
+                    <span class="sr-only">Account</span>
+                </button>
+            </div>
+            <div class="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p class="subtitle">We're here to help with your RV journey</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="contact-content">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <h2>Get in Touch</h2>
+                    <p>Have questions about RVs or need assistance? Our team is here to help you find the perfect solution.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-phone" aria-hidden="true"></i>
+                            <div class="method-details">
+                                <h3>Call Us</h3>
+                                <p>1-800-RV-DEALS</p>
+                                <p class="hours">Mon-Fri: 9AM-6PM EST</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                            <div class="method-details">
+                                <h3>Email Us</h3>
+                                <p>support@truervs.com</p>
+                                <p class="hours">24/7 Response Time</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                            <div class="method-details">
+                                <h3>Visit Us</h3>
+                                <p>123 RV Way</p>
+                                <p>Denver, CO 80202</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-contact">
+                        <h3>Connect With Us</h3>
+                        <div class="social-icons">
+                            <a href="#" title="Facebook" aria-label="Visit our Facebook page">
+                                <i class="fab fa-facebook" aria-hidden="true"></i>
+                            </a>
+                            <a href="#" title="Twitter" aria-label="Visit our Twitter page">
+                                <i class="fab fa-twitter" aria-hidden="true"></i>
+                            </a>
+                            <a href="#" title="Instagram" aria-label="Visit our Instagram page">
+                                <i class="fab fa-instagram" aria-hidden="true"></i>
+                            </a>
+                            <a href="#" title="LinkedIn" aria-label="Visit our LinkedIn page">
+                                <i class="fab fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <h2>Send Us a Message</h2>
+                    <form id="contactForm" action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="sales">Sales Question</option>
+                                <option value="support">Technical Support</option>
+                                <option value="dealer">Dealer Relations</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="contact-faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>How do I list my RV for sale?</h3>
+                    <p>Create an account, click on "Sell Your RV," and follow our step-by-step listing process. We'll guide you through adding photos, descriptions, and pricing.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What are your business hours?</h3>
+                    <p>Our customer service team is available Monday through Friday, 9AM to 6PM EST. Online support is available 24/7 through our chat system.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How do I become a verified dealer?</h3>
+                    <p>Visit our Dealer Portal and complete the verification process. We'll review your application and contact you within 2-3 business days.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What payment methods do you accept?</h3>
+                    <p>We accept all major credit cards, PayPal, and bank transfers for our services. Individual RV transactions are handled between buyers and sellers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>TrueRVs</h2>
+                    <p>Your trusted partner in finding the perfect RV</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="rv-listings.html">RVs</a></li>
+                            <li><a href="dealers.html">Dealers</a></li>
+                            <li><a href="about.html">About</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Resources</h3>
+                        <ul>
+                            <li><a href="#">Financing</a></li>
+                            <li><a href="#">Insurance</a></li>
+                            <li><a href="#">RV Guide</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Contact</h3>
+                        <ul>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="#">Support</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TrueRVs. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" title="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                    <a href="#" title="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                    <a href="#" title="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    <a href="#" title="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

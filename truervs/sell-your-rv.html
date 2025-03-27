@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Your RV - TrueRVs</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">TrueRVs</a>
+            </div>
+            <div class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="rv-listings.html">Buy RVs</a></li>
+                    <li><a href="sell-your-rv.html" class="active">Sell Your RV</a></li>
+                    <li><a href="dealers.html">Dealers</a></li>
+                    <li><a href="rv-value.html">RV Value</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+            <div class="nav-icons">
+                <button class="ai-helper-btn" title="Open AI Helper">
+                    <i class="fas fa-robot" aria-hidden="true"></i>
+                    <span>AI Helper</span>
+                </button>
+                <button class="account-btn" title="Account Menu">
+                    <i class="fas fa-user" aria-hidden="true"></i>
+                    <span class="sr-only">Account</span>
+                </button>
+            </div>
+            <div class="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sell Hero Section -->
+    <section class="sell-hero">
+        <div class="container">
+            <div class="sell-hero-content">
+                <h1>Sell Your RV</h1>
+                <p class="subtitle">Reach thousands of qualified buyers and sell your RV faster</p>
+                <div class="sell-benefits">
+                    <div class="benefit">
+                        <i class="fas fa-users" aria-hidden="true"></i>
+                        <span>50,000+ Active Buyers</span>
+                    </div>
+                    <div class="benefit">
+                        <i class="fas fa-clock" aria-hidden="true"></i>
+                        <span>Average 30 Days to Sell</span>
+                    </div>
+                    <div class="benefit">
+                        <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                        <span>Secure Transactions</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Listing Steps -->
+    <section class="listing-steps">
+        <div class="container">
+            <div class="steps-header">
+                <h2>List Your RV in 3 Easy Steps</h2>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Create Your Listing</h3>
+                    <p>Fill out our easy-to-use form with your RV's details, photos, and pricing.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Connect with Buyers</h3>
+                    <p>Receive inquiries from interested buyers and communicate securely through our platform.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Complete the Sale</h3>
+                    <p>Finalize the transaction with our secure payment system and transfer support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Listing Form -->
+    <section class="listing-form">
+        <div class="container">
+            <form id="sellRVForm" class="multi-step-form">
+                <!-- Step 1: Basic Information -->
+                <div class="form-step" style="display: block; margin-bottom: var(--spacing-xl);">
+                    <h2>RV Details</h2>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="rvType">RV Type</label>
+                            <select id="rvType" name="rvType" required>
+                                <option value="">Select RV Type</option>
+                                <option value="class-a">Class A Motorhome</option>
+                                <option value="class-b">Class B Motorhome</option>
+                                <option value="class-c">Class C Motorhome</option>
+                                <option value="travel-trailer">Travel Trailer</option>
+                                <option value="fifth-wheel">Fifth Wheel</option>
+                                <option value="popup">Pop-up Camper</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="make">Make</label>
+                            <input type="text" id="make" name="make" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="model">Model</label>
+                            <input type="text" id="model" name="model" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="year">Year</label>
+                            <input type="number" id="year" name="year" min="1900" max="2024" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="length">Length (feet)</label>
+                            <input type="number" id="length" name="length" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="condition">Condition</label>
+                            <select id="condition" name="condition" required>
+                                <option value="">Select Condition</option>
+                                <option value="new">New</option>
+                                <option value="like-new">Like New</option>
+                                <option value="excellent">Excellent</option>
+                                <option value="good">Good</option>
+                                <option value="fair">Fair</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Photos and Features -->
+                <div class="form-step" style="display: block; margin-bottom: var(--spacing-xl);">
+                    <h2>Photos & Features</h2>
+                    <div class="photo-upload">
+                        <div class="upload-box">
+                            <i class="fas fa-cloud-upload-alt" aria-hidden="true"></i>
+                            <p>Drag and drop photos here or click to upload</p>
+                            <span class="upload-tip">Upload at least 5 photos (max 15)</span>
+                            <label for="photos" class="sr-only">Upload RV Photos</label>
+                            <input type="file" id="photos" name="photos" multiple accept="image/*" class="file-input" aria-label="Upload RV photos">
+                        </div>
+                        <div class="photo-preview" id="photoPreview"></div>
+                    </div>
+                    <div class="features-section">
+                        <h3>Features & Amenities</h3>
+                        <div class="features-grid">
+                            <label class="feature-checkbox">
+                                <input type="checkbox" name="features" value="air-conditioning">
+                                <span>Air Conditioning</span>
+                            </label>
+                            <label class="feature-checkbox">
+                                <input type="checkbox" name="features" value="heating">
+                                <span>Heating</span>
+                            </label>
+                            <label class="feature-checkbox">
+                                <input type="checkbox" name="features" value="bathroom">
+                                <span>Full Bathroom</span>
+                            </label>
+                            <label class="feature-checkbox">
+                                <input type="checkbox" name="features" value="kitchen">
+                                <span>Kitchen</span>
+                            </label>
+                            <label class="feature-checkbox">
+                                <input type="checkbox" name="features" value="generator">
+                                <span>Generator</span>
+                            </label>
+                            <label class="feature-checkbox">
+                                <input type="checkbox" name="features" value="solar">
+                                <span>Solar Ready</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3: Pricing and Description -->
+                <div class="form-step" style="display: block;">
+                    <h2>Pricing & Description</h2>
+                    <div class="pricing-section">
+                        <div class="form-group">
+                            <label for="price">Asking Price ($)</label>
+                            <input type="number" id="price" name="price" required>
+                            <div class="price-guidance">
+                                <p>Suggested price range based on similar listings: $45,000 - $55,000</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <textarea id="description" name="description" rows="6" required></textarea>
+                            <div class="description-tips">
+                                <h4>Tips for a Great Description:</h4>
+                                <ul>
+                                    <li>Highlight unique features and recent upgrades</li>
+                                    <li>Mention maintenance history</li>
+                                    <li>Be honest about any issues or wear</li>
+                                    <li>Include usage history and storage details</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-us">
+        <div class="container">
+            <h2>Why Sell with TrueRVs?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <i class="fas fa-chart-line" aria-hidden="true"></i>
+                    <h3>Maximum Exposure</h3>
+                    <p>Your listing reaches thousands of qualified buyers actively searching for RVs.</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-tools" aria-hidden="true"></i>
+                    <h3>Listing Tools</h3>
+                    <p>Easy-to-use tools to create professional listings that stand out.</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-lock" aria-hidden="true"></i>
+                    <h3>Secure Platform</h3>
+                    <p>Protected communication and secure payment processing for peace of mind.</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-headset" aria-hidden="true"></i>
+                    <h3>Expert Support</h3>
+                    <p>Dedicated support team to help you through the entire selling process.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>TrueRVs</h2>
+                    <p>Your trusted partner in finding the perfect RV</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="rv-listings.html">Buy RVs</a></li>
+                            <li><a href="sell-your-rv.html">Sell Your RV</a></li>
+                            <li><a href="dealers.html">Dealers</a></li>
+                            <li><a href="rv-value.html">RV Value</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Resources</h3>
+                        <ul>
+                            <li><a href="#">Financing</a></li>
+                            <li><a href="#">Insurance</a></li>
+                            <li><a href="#">RV Guide</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Contact</h3>
+                        <ul>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="#">Support</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TrueRVs. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" title="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                    <a href="#" title="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                    <a href="#" title="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    <a href="#" title="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 

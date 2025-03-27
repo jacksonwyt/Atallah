@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RV Listings - TrueRVs</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Specialized styles for the buy RVs page layout */
+        .rv-page-layout {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: var(--spacing-xl);
+        }
+        
+        .rv-search-sidebar {
+            background-color: var(--dark-grey);
+            border-radius: var(--border-radius-lg);
+            padding: var(--spacing-lg);
+            position: sticky;
+            top: calc(var(--spacing-lg) + 80px);
+            height: max-content;
+            box-shadow: var(--box-shadow);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .rv-search-sidebar h2 {
+            font-size: 1.5rem;
+            margin-bottom: var(--spacing-lg);
+            color: var(--white);
+        }
+        
+        .search-fields {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-md);
+        }
+        
+        .search-field {
+            width: 100%;
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .rv-search-sidebar .search-btn {
+            width: 100%;
+            margin-top: var(--spacing-md);
+        }
+
+        .filter-group {
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .filter-group h3 {
+            font-size: 1.1rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--lighter-grey);
+        }
+        
+        .rv-listings-content {
+            width: 100%;
+        }
+        
+        .rv-section {
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .rv-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: var(--spacing-lg);
+            color: var(--white);
+        }
+        
+        .quick-filters {
+            display: flex;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-lg);
+            overflow-x: auto;
+            padding-bottom: var(--spacing-sm);
+        }
+        
+        /* Checkbox styling */
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            color: var(--white);
+            font-size: 0.9rem;
+        }
+        
+        .checkbox-label input[type="checkbox"] {
+            appearance: none;
+            -webkit-appearance: none;
+            width: 18px;
+            height: 18px;
+            border: 1px solid var(--medium-grey);
+            border-radius: 4px;
+            background-color: var(--black);
+            position: relative;
+            cursor: pointer;
+            outline: none;
+        }
+        
+        .checkbox-label input[type="checkbox"]:checked {
+            background-color: var(--pastel-orange);
+            border-color: var(--pastel-orange);
+        }
+        
+        .checkbox-label input[type="checkbox"]:checked::after {
+            content: '';
+            position: absolute;
+            left: 6px;
+            top: 2px;
+            width: 5px;
+            height: 10px;
+            border: solid var(--dark-blue);
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+        
+        .filter-options {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        @media (max-width: 1024px) {
+            .rv-page-layout {
+                grid-template-columns: 250px 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .rv-page-layout {
+                grid-template-columns: 1fr;
+            }
+            
+            .rv-search-sidebar {
+                position: relative;
+                top: 0;
+                margin-bottom: var(--spacing-lg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">TrueRVs</a>
+            </div>
+            <div class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="rv-listings.html" class="active">Buy RVs</a></li>
+                    <li><a href="sell-your-rv.html">Sell Your RV</a></li>
+                    <li><a href="dealers.html">Dealers</a></li>
+                    <li><a href="rv-value.html">RV Value</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+            <div class="nav-icons">
+                <button class="ai-helper-btn" title="Open AI Helper">
+                    <i class="fas fa-robot" aria-hidden="true"></i>
+                    <span>AI Helper</span>
+                </button>
+                <button class="account-btn" title="Account Menu">
+                    <i class="fas fa-user" aria-hidden="true"></i>
+                    <span class="sr-only">Account</span>
+                </button>
+            </div>
+            <div class="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- RV Page Header -->
+    <section class="rv-search-section">
+        <div class="container">
+            <h1>Find Your Perfect RV</h1>
+            <p>Browse our extensive inventory of new and used RVs</p>
+        </div>
+    </section>
+
+    <!-- Main Content with Sidebar Layout -->
+    <section class="rv-listings">
+        <div class="container">
+            <div class="rv-page-layout">
+                <!-- Left Sidebar for Search & Filters -->
+                <div class="rv-search-sidebar">
+                    <h2>Search & Filter</h2>
+                    <div class="search-fields">
+                        <div class="search-field">
+                            <label for="keyword">Keyword</label>
+                            <input type="text" id="keyword" placeholder="Make, model, or keyword">
+                        </div>
+                        <div class="search-field">
+                            <label for="rv-type">Type</label>
+                            <select id="rv-type" title="Select RV Type">
+                                <option value="">All Types</option>
+                                <option value="class-a">Class A</option>
+                                <option value="class-b">Class B</option>
+                                <option value="class-c">Class C</option>
+                                <option value="travel-trailer">Travel Trailer</option>
+                                <option value="fifth-wheel">Fifth Wheel</option>
+                            </select>
+                        </div>
+                        <div class="search-field">
+                            <label for="price-range">Price Range</label>
+                            <select id="price-range" title="Select Price Range">
+                                <option value="">Any Price</option>
+                                <option value="0-50000">Under $50,000</option>
+                                <option value="50000-100000">$50,000 - $100,000</option>
+                                <option value="100000-200000">$100,000 - $200,000</option>
+                                <option value="200000+">$200,000+</option>
+                            </select>
+                        </div>
+                        <div class="search-field">
+                            <label for="location">Location</label>
+                            <input type="text" id="location" placeholder="Enter ZIP or City">
+                        </div>
+                        <div class="search-field">
+                            <label for="distance">Distance</label>
+                            <select id="distance" title="Select Distance">
+                                <option value="50">50 miles</option>
+                                <option value="100" selected>100 miles</option>
+                                <option value="200">200 miles</option>
+                                <option value="500">500 miles</option>
+                                <option value="any">Any Distance</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i>
+                        Search RVs
+                    </button>
+                    
+                    <div class="filter-group">
+                        <h3>Condition</h3>
+                        <div class="filter-options">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="condition" value="new"> New
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="condition" value="used"> Used
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h3>Seller Type</h3>
+                        <div class="filter-options">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="seller" value="dealer"> Dealer
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="seller" value="private"> Private Seller
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h3>Features</h3>
+                        <div class="filter-options">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="features" value="slideout"> Slideouts
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="features" value="outdoor-kitchen"> Outdoor Kitchen
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="features" value="bunkhouse"> Bunkhouse
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Content Area with RV Listings -->
+                <div class="rv-listings-content">
+                    <div class="listings-header">
+                        <div class="results-count">
+                            <h2>248 RVs Available</h2>
+                        </div>
+                        <div class="sort-options">
+                            <select id="sort-order" title="Sort Results">
+                                <option value="newest">Newest First</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="mileage">Lowest Mileage</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="quick-filters">
+                        <button class="active">All RVs</button>
+                        <button>New</button>
+                        <button>Used</button>
+                        <button>For Sale by Owner</button>
+                        <button>Dealer Listings</button>
+                    </div>
+                    
+                    <!-- Featured Listings Section -->
+                    <div class="rv-section">
+                        <h2>Featured RVs</h2>
+                        <div class="rv-grid">
+                            <!-- RV Card 1 -->
+                            <div class="rv-card">
+                                <div class="rv-image">
+                                    <img src="https://placehold.co/400x300" alt="2024 Winnebago Vista">
+                                    <div class="dealer-badge">
+                                        <img src="https://placehold.co/30x30" alt="Dealer Logo">
+                                        <span>Premium Dealer</span>
+                                    </div>
+                                </div>
+                                <div class="rv-details">
+                                    <h3>2024 Winnebago Vista</h3>
+                                    <div class="price">$175,995</div>
+                                    <div class="rv-specs">
+                                        <span><i class="fas fa-ruler"></i> 32 ft</span>
+                                        <span><i class="fas fa-bed"></i> Sleeps 6</span>
+                                        <span><i class="fas fa-tachometer-alt"></i> 1,200 mi</span>
+                                    </div>
+                                    <div class="rv-location">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        Denver, CO
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- RV Card 2 -->
+                            <div class="rv-card">
+                                <div class="rv-image">
+                                    <img src="https://placehold.co/400x300" alt="2023 Airstream Atlas">
+                                    <div class="dealer-badge">
+                                        <img src="https://placehold.co/30x30" alt="Dealer Logo">
+                                        <span>Premium Dealer</span>
+                                    </div>
+                                </div>
+                                <div class="rv-details">
+                                    <h3>2023 Airstream Atlas</h3>
+                                    <div class="price">$289,999</div>
+                                    <div class="rv-specs">
+                                        <span><i class="fas fa-ruler"></i> 24 ft</span>
+                                        <span><i class="fas fa-bed"></i> Sleeps 2</span>
+                                        <span><i class="fas fa-tachometer-alt"></i> 5,800 mi</span>
+                                    </div>
+                                    <div class="rv-location">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        Boulder, CO
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- New Arrivals Section -->
+                    <div class="rv-section">
+                        <h2>New Arrivals</h2>
+                        <div class="rv-grid">
+                            <!-- RV Card 3 -->
+                            <div class="rv-card">
+                                <div class="rv-image">
+                                    <img src="https://placehold.co/400x300" alt="2024 Jayco Eagle">
+                                    <div class="dealer-badge">
+                                        <img src="https://placehold.co/30x30" alt="Dealer Logo">
+                                        <span>Certified Dealer</span>
+                                    </div>
+                                </div>
+                                <div class="rv-details">
+                                    <h3>2024 Jayco Eagle</h3>
+                                    <div class="price">$68,950</div>
+                                    <div class="rv-specs">
+                                        <span><i class="fas fa-ruler"></i> 38 ft</span>
+                                        <span><i class="fas fa-bed"></i> Sleeps 8</span>
+                                        <span><i class="fas fa-tachometer-alt"></i> New</span>
+                                    </div>
+                                    <div class="rv-location">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        Fort Collins, CO
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- RV Card 4 -->
+                            <div class="rv-card">
+                                <div class="rv-image">
+                                    <img src="https://placehold.co/400x300" alt="2024 Forest River Salem">
+                                    <div class="dealer-badge">
+                                        <img src="https://placehold.co/30x30" alt="Dealer Logo">
+                                        <span>Verified Dealer</span>
+                                    </div>
+                                </div>
+                                <div class="rv-details">
+                                    <h3>2024 Forest River Salem</h3>
+                                    <div class="price">$42,500</div>
+                                    <div class="rv-specs">
+                                        <span><i class="fas fa-ruler"></i> 28 ft</span>
+                                        <span><i class="fas fa-bed"></i> Sleeps 6</span>
+                                        <span><i class="fas fa-tachometer-alt"></i> New</span>
+                                    </div>
+                                    <div class="rv-location">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        Loveland, CO
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- All Listings Section -->
+                    <div class="rv-section">
+                        <h2>All Available RVs</h2>
+                        <div class="rv-grid">
+                            <!-- Additional RV cards would be listed here -->
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="pagination">
+                        <button class="prev-page" title="Previous Page" aria-label="Go to previous page">
+                            <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                        </button>
+                        <div class="page-numbers">
+                            <button class="active" aria-current="page" aria-label="Page 1">1</button>
+                            <button aria-label="Page 2">2</button>
+                            <button aria-label="Page 3">3</button>
+                            <span>...</span>
+                            <button aria-label="Page 12">12</button>
+                        </div>
+                        <button class="next-page" title="Next Page" aria-label="Go to next page">
+                            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>TrueRVs</h2>
+                    <p>Your trusted partner in finding the perfect RV</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="rv-listings.html">Buy RVs</a></li>
+                            <li><a href="sell-your-rv.html">Sell Your RV</a></li>
+                            <li><a href="dealers.html">Dealers</a></li>
+                            <li><a href="rv-value.html">RV Value</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Resources</h3>
+                        <ul>
+                            <li><a href="#">Financing</a></li>
+                            <li><a href="#">Insurance</a></li>
+                            <li><a href="#">RV Guide</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Contact</h3>
+                        <ul>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="#">Support</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TrueRVs. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 
